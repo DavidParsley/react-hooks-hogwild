@@ -38,7 +38,8 @@ export default function HogCreator({ onAddHog }) {
           type="text" 
           placeholder="Name" 
           value={name} 
-          onChange={(e) => setName(e.target.value)} 
+          onChange={(e) => setName(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -48,6 +49,7 @@ export default function HogCreator({ onAddHog }) {
           placeholder="Specialty" 
           value={specialty} 
           onChange={(e) => setSpecialty(e.target.value)} 
+          required
         />
       </div>
       <div>
@@ -57,6 +59,7 @@ export default function HogCreator({ onAddHog }) {
           placeholder="Weight" 
           value={weight} 
           onChange={(e) => setWeight(e.target.value)} 
+          required
         />
       </div>
       <div>
@@ -66,6 +69,7 @@ export default function HogCreator({ onAddHog }) {
           placeholder="Highest Medal" 
           value={highestMedal} 
           onChange={(e) => setHighestMedal(e.target.value)} 
+          required
         />
       </div>
       <div>
@@ -75,6 +79,7 @@ export default function HogCreator({ onAddHog }) {
           placeholder="Image URL" 
           value={image} 
           onChange={(e) => setImage(e.target.value)} 
+          required
         />
       </div>
       <div>
@@ -84,6 +89,7 @@ export default function HogCreator({ onAddHog }) {
             type="checkbox" 
             checked={greased} 
             onChange={(e) => setGreased(e.target.checked)} 
+            required
           />
         </label>
       </div>
