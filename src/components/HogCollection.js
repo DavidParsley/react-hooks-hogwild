@@ -14,7 +14,9 @@ export default function HogCollection({ hogs, onSelectHog, onHideHog, setIsGreas
       </label>
       <div className="ui grid">
         {hogs.map((hog) => (
-          <Hog key={hog.name} hog={hog} onSelectHog={onSelectHog} onHideHog={onHideHog} />
+          <div  className="ui eight wide column" key={hog.name} >
+          <Hog hog={hog} onSelectHog={onSelectHog} onHideHog={onHideHog} />
+          </div>
         ))}
       </div>
     </div>

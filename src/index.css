@@ -73,22 +73,47 @@ ul {
   font-size: .75em;
 }
 
-
 .indexWrapper {
   margin: auto;
 }
 
-
 .pigTile {
-  display: inline;
+  display: flex; /* Changed to flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
   background-repeat: no-repeat;
   background-position: center 90%;
-  float: left;
   margin: 2%;
   padding: 1%;
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
   opacity: 1;
+  max-width: 100%; /* Prevent overflow */
+}
+
+.pigTile img {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.minPigTile {
+  width: 150px; /* Updated to smaller size */
+  height: 150px; /* Updated to smaller size */
+  background-size: cover;
+}
+
+.maxPigTile {
+  width: 300px; /* Updated to medium size */
+  height: 300px; /* Updated to medium size */
+  background-size: cover;
+}
+
+.pigTile:hover {
+  transform: scale(1.05);
+}
+
+.pigTile h3 {
+  color: #FBB;
 }
 
 .minBackgroundSneak {
@@ -108,27 +133,6 @@ ul {
   opacity: 0.75;
 }
 
-.pigTile h3 {
-  color: #FBB;
-}
-
-.minPigTile {
-  width: 250px;
-  height: 250px;
-  background-size: cover;
-}
-
-.maxPigTile {
-  background-size: cover;
-  width: 500px;
-  height: 500px;
-}
-
-.pigTile:hover {
-  transform: scale(1.05);
-}
-
-
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 80px;
@@ -139,7 +143,6 @@ ul {
   padding: 1%;
   clear: both;
 }
-
 
 @keyframes App-logo-spin {
   from {
